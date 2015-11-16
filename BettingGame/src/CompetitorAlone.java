@@ -1,11 +1,13 @@
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
 
 public class CompetitorAlone {
 	
 	private String firstname;
 	private String lastname;
-	private String birthDate;
+	private Calendar birthDate;
 	
-	public CompetitorAlone(String firstname, String lastname, String birthDate){
+	public CompetitorAlone(String firstname, String lastname, Calendar birthDate){
 		setFirstname(firstname);
 		setLastname(lastname);
 		setBirthDate(birthDate);
@@ -18,7 +20,7 @@ public class CompetitorAlone {
 	public String getLastname(){
 		return lastname;
 	}
-	public String getBirthDate(){
+	public Calendar getBirthDate(){
 		return birthDate;
 	}
 	
@@ -29,12 +31,16 @@ public class CompetitorAlone {
 	public void setLastname(String lastname){
 		this.lastname =  lastname;
 	}
-	public void setBirthDate(String birthDate){
+	public void setBirthDate(Calendar birthDate){
 		this.birthDate =  birthDate;
 	}
 	
 	public String toString(){
-		String str = "Name: " + firstname + " Lastname: " +lastname + " Birth date: " + birthDate;
+		
+		SimpleDateFormat strDate = new SimpleDateFormat();
+        strDate.applyPattern("dd/MM/yyyy");
+        System.out.println(strDate.format(this.birthDate.getTime()));
+		String str = "Name: " + firstname + " Lastname: " +lastname + " Birth date: " + strDate;
 		return str;
 	}
 	
