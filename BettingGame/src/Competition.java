@@ -1,11 +1,12 @@
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.Collections;
 
 public class Competition {
 	private String name;
 	private ArrayList<Competitor> listCompetitors = new ArrayList<Competitor>();
 	//TODO maybe Calendar?
-	String dateClosure;
+	Calendar dateClosure;
 	
 	public String getName(){
 		return this.name;
@@ -14,7 +15,7 @@ public class Competition {
 	public ArrayList<Competitor> getListCompetitors(){
 		return this.listCompetitors;
 	}
-	public String getDateClosure(){
+	public Calendar getDateClosure(){
 		return this.dateClosure;
 	}
 	
@@ -27,7 +28,7 @@ public class Competition {
 		Collections.copy(this.listCompetitors, competitors);
 	}
 	
-	public void  setDataClosure(String dataClosure){
+	public void  setDataClosure(Calendar dataClosure){
 		this.dateClosure = dataClosure;
 	}
 }
