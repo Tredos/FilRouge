@@ -5,7 +5,6 @@ import java.util.Collections;
 public class Competition {
 	private String name;
 	private ArrayList<Competitor> listCompetitors = new ArrayList<Competitor>();
-	//TODO maybe Calendar?
 	Calendar dateClosure;
 	
 	public String getName(){
@@ -23,7 +22,6 @@ public class Competition {
 		this.name = name;
 	}
 
-	
 	public void setListCompetitors(ArrayList<Competitor> competitors){
 		Collections.copy(this.listCompetitors, competitors);
 	}

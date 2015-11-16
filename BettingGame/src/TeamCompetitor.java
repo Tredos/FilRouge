@@ -3,6 +3,7 @@ import java.util.Collections;
 
 public class TeamCompetitor {
 	private String name;
+	
 	//TODO Have to change Competitor Alone <-> competitor
 	private ArrayList<CompetitorAlone> listCompetitors = new ArrayList<CompetitorAlone>();
 	
